@@ -451,8 +451,13 @@ The Liberal Party took the first steps toward a National Pharmacare system that 
 
 
 
+# conclusion
 
+In conclusion, the overall support for the Liberal Party in Ontario stays roughly the same since the last Canadian federal election.
 
+As for the policies, public opinion is divided among different income groups. The difference is particularly obvious when people are asked about the Basic Personal Amount(BPA). The opinions are much less divided when talking about CERB and National Pharmacare System.
+
+Small changes may be required for BPA if the support from the high-income group of people is needed but overall, there should be no change for the current set of policies.
 
 
 
@@ -463,13 +468,20 @@ The Liberal Party took the first steps toward a National Pharmacare system that 
 
 # Appendix
 
+
 ### Appendix(A)
+The polltrakcer of CBC NEWS: https://newsinteractives.cbc.ca/elections/poll-tracker/canada/
+
+
+### Appendix(B)
+
+Full code and data supporting this analysis is available at: https://github.com/CharleneJin99/monthly-poll-report-of-September
+
+### Appendix(C)
 Link to Survey:https://forms.gle/hGrg3vvN1bi9yt1FA
 
 
 Screenshot of survey: You can see it on the very last page of this report.
-
-\newpage
 
 
 ```{r pressure, echo=FALSE, fig.cap="Screenshot of the survey", out.width = '100%'}
@@ -479,18 +491,8 @@ knitr::include_graphics("/Users/charlene/304ass2/monthly-poll-report-of-Septembe
 
 ```
 
-\newpage
 
 
-
-
-### Appendix(B)
-The polltrakcer of CBC NEWS: https://newsinteractives.cbc.ca/elections/poll-tracker/canada/
-
-
-### Appendix(C)
-
-Full code and data supporting this analysis is available at: https://github.com/CharleneJin99/monthly-poll-report-of-September
 \newpage
 
 # References
