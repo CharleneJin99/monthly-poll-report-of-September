@@ -1,0 +1,1067 @@
+---
+title: "Report of September's Polling Updates for the Liberal Party of Canada" 
+subtitle: "general positive opnion collected from the recent survey"
+output:
+  pdf_document:
+   extra_dependencies: ["float"]
+  html_document:
+    df_print: paged
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(fig.pos = "!h", out.extra = "")
+install.packages---
+title: "Report of September's Polling Updates for the Liberal Party of Canada" 
+subtitle: "general positive opnion collected from the recent survey"
+output:
+  pdf_document:
+   extra_dependencies: ["float"]
+  html_document:
+    df_print: paged
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(fig.pos = "!h", out.extra = "")
+install.packages("knitr",repos="http://cran.us.r-project.org" )
+install.packages("ggpubr",repos="http://cran.us.r-project.org")
+library(knitr)
+knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_knit$get
+install.packages("ggstatsplot", repos="http://cran.us.r-project.org" )
+install.packages("tidyverse", repos="http://cran.us.r-project.org" )
+install.packages("ggplot2",repos="http://cran.us.r-project.org" )
+install.packages("float", repos="http://cran.us.r-project.org" )
+library(tidyverse)
+library(ggplot2)
+library(ggstatsplot)
+library(ggpubr)
+library(float)
+
+```
+
+\begin{center}
+Author: Qiu Jin, Guangyu Du, Runqi Bi, Xingkun Yin
+\end{center}
+
+
+\begin{center}
+Date: 7 October 2020
+\end{center}
+
+
+\begin{center}
+Published by: Petit Poll 
+\end{center}
+\newpage
+
+# Summary
+
+The task of our September poll research this time is to use a questionnaire survey to find out how many people support the Liberal Party, what their income is, and whether they support the three major policies implemented by the Liberal Party: 1. whether they support CEBR, 2. whether they support the government to increase BPA, 3. Whether they support National Pharmacare system that will help reduce prescription drug costs. By grouping people with different income levels and then sampling and observing the responses, we figure out that people with different income levels have a certain supporting tendency toward various policies. In the following report, our goal is to dig into the relationship between individual annual income level and support rate for the Liberal Party, and support rates for the three lately published policies.
+
+We collected the mailboxes of all Canadians living in Ontario from the government, designed a questionnaire and sent the questionnaires to these people's mailboxes. In order to avoid too many people unwilling to take time to participate in the survey, we promise that we will sample 2% of the participants, and each of them will get a lottery chance. In addition, we will declare at the beginning of the questionnaire that we will protect their respondent privacy.
+
+First, we analyzed the people's support rate for the Liberal Party from April to August and found that there were slightly more people opposed to the Liberal Party, although almost the same number of people opposed and supported the Liberal Party. Then we simulated 100,000 results based on the data collected in September and discovered that the supporters of the Liberal Party slightly outnumber the opponents of the Liberal Party. 
+
+Second, we analyzed people's support rate for the government should continue issuing CERB in the following months. Here, we grouped samples into income-level groups because we supposed that the amount of income would affect people's decision-making to some extent. We divide the income levels into annual income less than 20,000, annual income between 20,000 and 80,000, and annual income greater than 80,000. And each group has simulated data for 10,000 times. Here we use Stratified sampling. We can find that the people in each group support this policy the most, but the lower the income group, the more people support it. The group with an income of less than 20,000 has a support rate of 85%, which is the highest. Followed by people with incomes between 20,000 and 80,000, about 70% of them are supported, and those with incomes above 80,000 have the lowest support rate of around 62%. Then we used a histogram Figure 2.1 to more intuitively show the proportion of people with different income levels who support, oppose or do not care about this policy. We see that the two groups of people whose income is less than 80,000 have more opponents than those who don't care. Only those whose income is higher than 80,000, the number of people who don't care is slightly higher than the number of opponents. We further used a histogram Figure 2.2 to summarize the percentage of people at all income levels that support the policy, and the conclusion is that people above 70% support it.
+
+Third, we want to know the support rate of people with different income level for increasing BPA. Because this policy will issue more tax rebates for people with incomes less than 147,000, we divide the population into those with incomes higher than 147,000 this time and the income is less than 147,000. Through the summary table, we can intuitively see that indeed only 27.5% of people with incomes higher than 147,000 support this policy, while about 80% of people with incomes below 147,000 support this policy. Through Pie Chart 3.1, we can see in more detail that it is obvious that low-income people support this policy and hope to get more tax rebates, while high-income people support only about 27.5%, far Far less than the 80% support rate of low-income people. We can also find that the high-income people who do not care about this policy also account for a relatively large proportion, as high as about 33%, even more than those who support it. Finally, through Figure 3.2, we can see that although high-income groups tend to oppose this policy, due to the widespread support of low-income groups for this policy, on the whole, supporters still account for the majority of all people.
+
+Fourth, We want to know how people support the National Pharmacare system that will help reduce prescription drug costs with the withdrawal of the Canadian Liberal Party. Through Figure 4.1, it was surprisingly found that more than 80% of people support this policy, which is a very high support rate. Here we still group the data according to income below 20,000, between 20,000 and 80,000, and above 80,000, and then simulate 10,000 times each. It can be seen that the support rate of the three groups is very high, although the higher the income group, the lower the support rate of this policy. People with incomes below 20,000 and those with incomes between 20,000 and 80,000 have almost the same approval ratings, while those with incomes above 80,000 have a significant drop in approval ratings. Figure 3.2 shows in more detail the support, opposition, and uncertainty ratios of each income group. It was found that with the increase in income, the approval rate shows a slight downward trend, while the uncertainty and disapproval rates both show a slight upward trend. In the other two groups, the uncertain samples were larger than the opponent samples.
+
+We think this analysis is essential because we can predict people's support rate towards different policies with respect to income levels of the individuals, and then speculate the overall support rate for the Liberal Party. Moreover, people's income is relatively easy to obtain, and the prediction of the support rate towards the three policies is strongly related to people's income.
+
+The weakness of this study is that our questionnaire only asks whether it supports the Liberal Party and whether it supports some policies implemented by the Liberal Party. This may cause those who initially opposed the Liberal Party to be unwilling to fill out this questionnaire, which causes insufficient samples of individuals with political leanings other than the Liberal Party. Another weakness is that some people may have a higher opportunity cost, and they are unwilling to spend time participating in questionnaires. The $200 gift card in the form of a lottery could be not attractive enough for them. In this way, we could risk insufficient data from people with higher income levels. Besides, we used the method of stratified sampling for most of the analysis, that means we divided people into different income-level groups and pick samples from each group randomly. The technique is helpful; it can provide a greater precision with a lower cost. The problem is that, without knowing the actual percentage of each group of income-level in the real world, the simulated data might not be accurate, and the prediction of the population will be biased. One of another lurking variable is whether the respondent is natives or immigrants, that may influence their attitude towards the liberal party. Therefore, in our future work, we will contribute to this study by combining these variables and produce more effective results.
+
+^[* Full code and data supporting this analysis is available at https://github.com/CharleneJin99/monthly-poll-report-of-September ]
+
+^[* A link and a screenshot of the survey can be found at Appendix(A)]
+
+\newpage
+
+# Introduction
+<font size="4">Due to the influence of COVID-19, the whole Canada society is experiencing an exceptional and challenging period. The liberal party has conducted various new politics to improve people's livelihood and help everyone to overcome difficulties. In this monthly report, the Petit Poll Company will summarize the data collected in September and analyze the people's response towards the liberal party and the new politics.
+
+In specific, we will discuss people's attitude towards 1) the liberal party of Canada; 2) if they support the idea that the government should continue issuing CERB in the following months; 3) whether they support the policy about raising the Basic Personal Amount for people earning under \$147,000 a year; 4)do they support a National Pharmacare system that will help reduce prescription drug costs.
+
+The purpose of this report is to draw a clear picture on Ontario citizens' responses with different income levels towards the three policies in order to make great supports and help on further development of the party in following steps. Given the situation of the present pandemic, it is crucial that the liberal party knows the real needs of society and would be able to help our people.  
+<font>
+
+
+
+# Methodology
+
+The geographic focus of this research will be particularly Ontario province. The population is all the citizens with suffrage in this province. We have designed a simple survey asking people's attitude upon the liberal party and new politics and collected the responses by sending emails to the list of Ontario citizens' email address. The survey was taken anonymously, all the participants would be notified by a consent form at the start of the survey. Since too much non-response would cause a bias on the sample data, and the results could be underestimated, in order to encourage people's participation, a lottery chance would be given to each participant. We sent the survey to over 100 thousands email addresses and received around ten thousands responses. The research sample is based on these 10 thousand responses, and the frame of data collection is the email list of Ontario citizens that is provided by our company. The fund for this survey research involves the cost of running survey platform, cost of lottery and cost of managing databases, which is approximately 30,000 CAD in total.
+
+In this research, we use the sampling methods of simple random sampling and stratified sampling. For the stratified sampling method, we partition the population into subgroups by different level of personal annual income. We replaced all negative income with zero because a negative income is actually unreasonable. Citizens with an annual income lower than 20,000CAD are classified as a low-income group. Citizens with annual income between 20,000CAD and 80,000CAD are classified as a medium-income group. Citizens with annual income higher than 80,000CAD are classified as a high-income group. Since the support rate of politics we are studying is strongly relevant to personal income, it is reasonable that the response from each income group is highly representative. After grouping the sample data, we randomly select the same amount of responses with replacement from each group, combine them into a sample group, simulate them by 100,000 times and compare the results with past months' result. Furthermore, we will conduct our predictions of the support rate of the entire population.
+
+
+\newpage
+
+# Data Discussion
+
+
+```{r population simulation, echo=FALSE}
+library("tidyverse")
+set.seed(100)
+
+#data simulation for population. As for each specific question, the rate for each response is different based on past information, note that "IDC" means "I do not care".
+partyvote <- sample( c("YES","NO", "IDC"),100000, prob = c(0.39,0.40, 0.21), replace = TRUE)# simulation for 1st Question
+popvote <- sample( c("YES","NO", "IDC"),100000, prob = c(0.60,0.28, 0.1), replace = TRUE)# simulation for 2nd Question
+bpa_vote <- sample( c("YES","NO", "IDC"),100000, prob = c(0.40, 0.30, 0.30), replace = TRUE)# simulation for 3rd Question  
+income <- rnorm(100000, mean = 50000, sd = 30000)
+population <- tibble(partyvote,popvote, bpa_vote, income)
+```
+
+
+\textcolor{blue}{First question:  Do you support the liberal party?}
+
+```{r,echo=FALSE}
+# visualize raw data
+legend_title <- "type of response"
+figure1_1 <- ggplot(data=population, aes(as.factor(partyvote)))+
+  geom_bar(aes(fill=as.factor(partyvote), y = (..count..)/1000), position="dodge") +
+  labs(x= "response type", y = "percentage for each response(%)", title ="Past months' overall support rate (figure 1.1)")+ #population response based on past information
+  scale_fill_manual(legend_title,values=c("#8FBC94","#4FB0C6","#CC9966"))
+figure1_1
+```
+\newpage
+```{r,echo=FALSE}
+set.seed(1111)
+simulated_vote<- sample( c("YES","NO", "IDC"),100000, prob = c(0.42,0.41, 0.17), replace = TRUE) #data simulation based on the new information we collected
+samplevote <- tibble(simulated_vote)
+# simple random sampling
+samplevote_SRS <- samplevote %>% sample_n(10000, replace = TRUE)
+# Visualize sample data
+legend_title <- "type of response"
+figure1_2<- ggplot(data=samplevote_SRS, aes(simulated_vote))+
+  geom_bar(aes(fill=as.factor(simulated_vote), y = (..count..)/100), position="dodge") +
+  labs(x= "response type", y = "percentage for each response", title = "Simulation of current overall support rate (figure 1.2)")+ # prediction of population response based on new collected data
+  scale_fill_manual(legend_title,values=c("#8FBC94","#4FB0C6","#CC9966"))
+figure1_2
+```
+
+
+```{r,include=FALSE}
+#Calculate the 95% of Confidence interval
+samq1<- samplevote_SRS %>% summarise(total_nuber= n(),average_support_rate= mean(simulated_vote == "YES"))
+q1pop <- samplevote %>%  summarise(total_nuber = n())
+# estimate the population mean support rate by sample mean support rate
+estq1 <- sum(q1pop$total_nuber/sum(q1pop$total_nuber) * samq1$average_support_rate)
+# calculate the variance of the support rate
+var_estq1 <- sum((q1pop$total_nuber/sum(q1pop$total_nuber))^2 *(1- samq1$total_nuber/q1pop$total_nuber) * samq1$average_support_rate *(1- samq1$average_support_rate)/(samq1$total_nuber - 1))
+# Calculate the 95% confidence interval
+lowerq1=estq1 - qnorm(0.975) *sqrt(var_estq1);upperq1=estq1 + qnorm(0.975) *sqrt(var_estq1)
+
+```
+
+
+
+<font size="4">For this question, we will provide the information for:
+a) The support rate on Liberal Party from Ontario citizens in the past few months(based on the data we collected from April to August).
+b) Based on the simulation of the data we collected in September, a prediction of population support rate on the Liberal Party in the real world.
+
+
+We used simple random sampling in this question. As figure 1.1 shows, based on the data we collected from April to August, around 39% of Ontario citizens supported the Liberal Party. Yet around 40% of people were not supporting the party and the rest of 21% of citizens did not care. Notice that the majority of people who voted "NO" could be supporters of the Conservative Party and people who voted "I don't care." could be supporting other parties or having no political leanings.
+
+As for figure 1.2, we simulated the data by 100000 times based on our collected data in September. We took the method of simple random sampling to simulate and predict the results. It is noticeable that the support rate has increased by 2%. As the against rate almost stays the same, the number of people voting "I don't care." decreased by 3%. This implies that we could predict the Liberal Party is gaining supports among society. Moreover, we could predict the real support rate on Liberal Party among the population is around 41% to 43% with 95% of confidence (calculated with mean which is an unbiased estimate). This could be relevant to the lately released policies and we will further discuss this topic in the following paragraph.
+
+^[* You could find a report that supports our analysis in Appendix(B)]
+</font>
+
+
+
+\newpage
+
+
+
+
+\textcolor{blue}{Second question: Do you support the idea that the government should continue issuing CERB in the following months?}
+
+
+```{r q2, echo=FALSE}
+
+
+#data simulation based on the data we collected in September
+set.seed(123456)
+income <- rnorm(100000, mean = 50000, sd =30000)
+income_level <- c("A:less than 20000", "B:between 20000 and 80000", "C:greater than 80000")
+
+
+vote <- NULL
+
+
+#data cleaning. Replace all negative income by zero, as it does not make sense to have a negative income.
+for (i in 1 : 100000){
+  if(income[i]<0){
+    income[i] = 0
+  } 
+# income and vote have correlation. Stratified sampling by different income-levels..
+  if (income[i] < 20000){
+   
+    vote[i] <- sample( c("YES","NO", "IDC"),1, prob = c(0.85,0.1, 0.05), replace = TRUE)
+    income_level[i] <- c("A:less than 20000")
+
+  }
+ 
+  if (income[i]>=20000 & income[i] < 80000){
+    vote[i] <- sample( c("YES","NO", "IDC"),1, prob = c(0.70,0.18, 0.12), replace = TRUE)
+    income_level[i] <- c("B:between 20000 and 80000")
+  }
+  if(income[i] >=80000){
+     vote[i] <- sample( c("YES","NO", "IDC"),1, prob = c(0.62,0.18, 0.2), replace = TRUE)
+    income_level[i] <- c("C:greater than 80000")
+    
+  }
+}
+population <- tibble(partyvote,popvote, bpa_vote, income)
+
+
+simulated_population <- tibble(vote,income_level,income)
+set.seed(1)
+# pick 10000 samples from each income-level group randomly.
+sample_STRS <- simulated_population %>% group_by(income_level) %>% sample_n(size = 10000,replace = TRUE)
+
+```
+
+
+<font size="4"> A visualized summary of the responses based on the sample data </font>
+
+```{r,echo=FALSE, message=FALSE}
+#summary of sample data
+samq2<- sample_STRS %>% group_by(income_level) %>% summarise(total_nuber= n(),average_support_rate= mean(vote == "YES"), average_income= mean(income))
+samq2
+# Visualize sample data
+legend_title <- "type of response"
+figure2_1<- ggplot(data=sample_STRS, aes(income_level))+
+  geom_bar(aes(fill=as.factor(vote), y = (..count..)/100), position="dodge") +
+  labs(x= "income level", y = "percentage for each response", title = "figure 2.1 different inome-level groups' vote with regards to CERB")+
+  scale_fill_manual(legend_title,values=c("purple","light blue","blue"))
+figure2_1
+  
+``` 
+
+
+
+\newpage
+<font size="4">Visualized overall summary of simulated data</font>
+```{r, echo=FALSE}
+
+legend_title <- "type of response"
+figure2_2 <- ggplot(data=sample_STRS, aes(as.factor(vote)))+
+  geom_bar(aes(fill=as.factor(vote), y = (..count..)/300), position="dodge") +
+  labs(x= "response type", y = "percentage for each response(%)", title ="figure 2.2  prediction of popularity vote with regards to CERB")+
+
+  scale_fill_manual(legend_title,values=c("purple","light blue","blue"))
+figure2_2
+
+
+```
+
+
+
+```{r, message=FALSE, include=FALSE}
+popq2 <- simulated_population %>% group_by(income_level) %>% summarise(total_nuber = n())
+# estimate the population mean support rate by sample mean support rate
+estq2 <- sum(popq2$total_nuber/sum(popq2$total_nuber) * samq2$average_support_rate)
+# calculate the variance of the support rate
+var_estq2 <- sum((popq2$total_nuber/sum(popq2$total_nuber))^2 *(1- samq2$total_nuber/popq2$total_nuber) * samq2$average_support_rate *(1- samq2$average_support_rate)/(samq2$total_nuber - 1))
+# Calculate the 95% confidence interval
+lowerq2=estq2 - qnorm(0.975) *sqrt(var_estq2);upperq2=estq2 + qnorm(0.975) *sqrt(var_estq2)
+
+```
+
+
+<font size="4">For this question, we will provide the information for:
+
+a) Based on the new data we collected in September, a possible variable that influences people's support rate about CERB. 
+b) Based on the simulation of the data we collected, a prediction of population response in the real world.
+
+For figure 2.1, we simulated the data by 100000 times based on our collected data. During the process of data cleaning, we used the stratified random sampling and put people into three different income-level groups according to the average income and its standard deviation(how spread out the data is). Since the average personal income is 50000, with a standard deviation of 30000, we divided people into three groups: income is lower than the normal level(less than 20,000); income is around the normal level(between 20,000 and 80,000), income is higher than the usual level(greater than 80,000). 
+
+It is not hard to notice that people with more income tend to be less supportive about having the government to carry on the benefit policies;. At the same time, the support rate among lower income-level group goes beyond 80%. Besides, more than 60% of people who have an income around the normal level would support this policy.
+
+The last figure(figure 2.2) is plotted based on the simulated data. With the information we get from the simulated data, we are 95% confident that the population's true average support rate of CERB should be at 71% to 72% (calculated with mean which is an unbiased estimate) . The high support rate among the lower-income group has significantly increased the average support rate of the policy.
+
+The situation of COVID-19 has been worsened in Ontario recently.  With the uncertainty of the future situation, society is getting more panic. Some people may heavily rely on the benefits issued by the government, such as CERB. We hope the analysis above can give you some clues about how different people with different income feel about this policy.</font>
+
+\newpage
+
+\textcolor{blue}{Third question: Do you support the Liberal Party of Canada's policy about raising the Basic Personal Amount (BPA) by almost \$2,000 for people earning under \$147,000 a year?}
+
+
+```{r q3, echo=FALSE}
+income_level_bpa <- c("A:less than 147000", "B:greater than or equal to 147000")
+#data cleaning. Replace all negative income by zero, as it does not make sense to have a negative income.
+set.seed(100)
+bpa_vote <- NULL
+
+for (i in 1 : 100000){
+# income and vote for bpa have correlation. Stratified sampling by different income-levels..
+  if (income[i] < 147000){
+    bpa_vote[i] <- sample( c("YES","NO", "IDC"),1, prob = c(0.80, 0.10, 0.10), replace = TRUE)
+    income_level_bpa[i] <- c("A:less than 147,000")
+
+  }
+  if (income[i] >= 147000){
+    bpa_vote[i] <- sample( c("YES","NO", "IDC"),1, prob = c(0.30, 0.40, 0.30), replace = TRUE)
+    income_level_bpa[i] <- c("B:greater than or equal to 147000")
+  }
+}
+
+simulated_population_bpa <- tibble(bpa_vote, income_level_bpa, income)
+set.seed(1)
+# pick 10000 samples from each income-level group randomly.
+sample_STRS_BPA <- simulated_population_bpa %>% group_by(income_level_bpa) %>% sample_n(10000, replace = TRUE)
+```
+
+<font size="4"> A visualized summary of the responses based on the sample data </font>
+
+```{r,echo=FALSE, message=FALSE}
+# utils::install.packages(pkgs = "ggstatsplot")
+# install.packages("broom")
+library(ggstatsplot)
+sam_bpa<- sample_STRS_BPA %>% group_by(income_level_bpa) %>% summarise(total_number= n(),average_support_rate= mean(bpa_vote == "YES"), average_income= mean(income))
+sam_bpa
+figure3_1 <- ggpiestats(data = sample_STRS_BPA,
+                 x = bpa_vote,
+                 y = income_level_bpa,
+                 title = "figure3.1: different response about raising BPA in different income group",
+                 results.subtitle = F,
+                 slice.label = 'percentage', 
+                 perc.k = 2,
+                 direction = 1,
+                 palette = 'Pastel2')
+figure3_1
+``` 
+
+
+<font size="4">Visualized overall summary of simulated data</font>
+```{r, echo=FALSE}
+legend_title <- "type of response"
+figure3_2 <- ggplot(data=sample_STRS_BPA, aes(as.factor(bpa_vote)))+
+  geom_bar(aes(fill=as.factor(bpa_vote), y = (..count..)/200), position="dodge") +
+  labs(x= "response type", y = "percentage for each response(%)", title ="figure 3.2 prediction of population's response about raising BPA") + 
+  scale_fill_manual(legend_title,values=c("#8FBC94","#4FB0C6","#CC9966"))
+figure3_2
+
+```
+
+```{r, message=FALSE, include=FALSE}
+bpa_overall <- simulated_population_bpa %>% group_by(income_level_bpa) %>% summarise(total_nuber = n())
+# estimate the population mean support rate by sample mean support rate
+estq3 <- sum(bpa_overall$total_nuber/sum(bpa_overall$total_nuber) * sam_bpa$average_support_rate)
+# calculate the variance of the support rate
+var_estq3 <- sum((bpa_overall$total_nuber/sum(bpa_overall$total_nuber))^2 *(1- sam_bpa$total_number/bpa_overall$total_nuber) * sam_bpa$average_support_rate *(1- sam_bpa$average_support_rate)/(sam_bpa$total_number - 1))
+# Calculate the 95% confidence interval
+lowerq2=estq3 - qnorm(0.975) *sqrt(var_estq3);upperq2=estq3 + qnorm(0.975) *sqrt(var_estq3)
+
+```
+
+\newpage
+We divide the data into two categories, those with income below 147,000 and those with income above 147,000. Because this policy has higher tax rebates for people whose income is less than 147,000. From the summary table above, we can find that for people with an income of more than $147,000, the support rate for this policy is 0.2752, which is much lower than those with an income of less than $147,000. The support rate of low-income people for this policy is as high as 0.8009. Because there are 10,000 people in our data set whose income is higher than $147,000, and 10,000 people are below $147,000. Therefore, through their different support rates, we have reason to believe that the amount of income is related to whether or not to support this policy.
+
+
+Figure 3.1 shows the percentage of people with incomes below $147,000 and above $147,000 who support, disagree, or don’t care about increasing BPA. We can find that up to about 80% of the low-income people support this policy, and only about 10% oppose it, which is about the same as those who don’t care. In contrast to high-income groups, more people oppose this policy than those who support it. About 39% of people oppose this policy, while those who support it account for only about 27.5%, even lower than those who don’t care which is about 33%. We can conclude from this that people with an income of less than 147,000 are particularly inclined to support this policy, while those with an income of more than 147,000 are slightly opposed to this policy, but there are also many people who support or do not care.
+
+
+Figure 3.2 shows the overall people’s support for this policy. In our forecast, about 47.5% of people will support this policy, about 25% will be opposed to this policy, and the remaining 27.5% will not care about this policy. Comparing with the information collected in the past (in Figure 3.1), we can see that the supporters may rise slightly, from 40% to 47.5%, while the opponents will slightly decrease, from 30% To 15%. This may be due to the slight decrease in people’s income this year. With the information we get from the data, we are 95% confident that the population’s true average support rate of raising BPA should be around 79.32% (calculated with mean which is an unbiased estimate). Such a high support rate is mainly due to the general support of low-income groups for this policy.
+
+
+
+
+\newpage
+\textcolor{blue}{Forth question: Do you support a National Pharmacare system that will help reduce prescription drug costs? }
+
+```{r, echo=FALSE}
+
+
+#data simulation based on the data we collected in September
+set.seed(100)
+income <- rnorm(100000, mean = 50000, sd =30000)
+income_level <- c("A:less than 20000", "B:between 20000 and 80000", "C:greater than 80000")
+
+
+support_pharmacare <- NULL
+
+
+#data cleaning. Replace all negative income by zero, as it does not make sense to have a negative income.
+for (i in 1 : 100000){
+  if(income[i]<0){
+    income[i] = 0
+  } 
+# income and support_pharmacare have correlation. Stratified sampling by different income-levels..
+  if (income[i] < 20000){
+   
+    support_pharmacare[i] <- sample( c("YES","NO", "Unsure"),1, prob = c(0.88,0.04, 0.08), replace = TRUE)
+    income_level[i] <- c("A:less than 20000")
+
+  }
+ 
+  if (income[i]>=20000 & income[i] < 80000){
+    support_pharmacare[i] <- sample( c("YES","NO", "Unsure"),1, prob = c(0.85,0.05, 0.10), replace = TRUE)
+    income_level[i] <- c("B:between 20000 and 80000")
+  }
+  if(income[i] >=80000){
+    support_pharmacare[i] <- sample( c("YES","NO", "Unsure"),1, prob = c(0.74,0.14, 0.12), replace = TRUE)
+    income_level[i] <- c("C:greater than 80000")
+    
+  }
+}
+population <- tibble(popvote, bpa_vote, income, support_pharmacare)
+
+
+simulated_populationq4 <- tibble(support_pharmacare,income_level,income)
+set.seed(100)
+# pick 10000 samples from each income-level group randomly.
+sample_STRSq4 <- simulated_populationq4 %>% group_by(income_level) %>% sample_n(10000, replace = TRUE)
+
+```
+
+```{r, echo=FALSE}
+
+
+legend_title <- "type of response"
+figure4_1 <- ggplot(data=sample_STRSq4, aes(as.factor(support_pharmacare)))+
+  geom_bar(aes(fill=as.factor(support_pharmacare), y = (..count..)/300), position="dodge") +
+  labs(x= "response type", y = "percentage for each response(%)", title ="figure 4.1  prediction of popularity vote with regards to 
+                    a National Pharmacare system")+
+
+  scale_fill_manual(legend_title,values=c("purple","light blue","blue"))
+figure4_1
+
+
+
+```
+
+
+```{r,echo=FALSE, message=FALSE}
+#summary of sample data
+samq4<- sample_STRSq4 %>% group_by(income_level) %>% summarise(total_nuber= n(),average_support_rate= mean(support_pharmacare == "YES"), average_income= mean(income))
+samq4
+# Visualize sample data
+legend_title <- "type of response"
+figure4_2<- ggplot(data=sample_STRSq4, aes(income_level))+
+  geom_bar(aes(fill=as.factor(support_pharmacare), y = (..count..)/10000), position="dodge") +
+  labs(x= "income level", y = "percentage for each response", title = "figure 4.2   different income-level groups' response with 
+  regards to a National Paarmacare system")+
+  scale_fill_manual(legend_title,values=c("purple","light blue","blue"))
+figure4_2
+  
+``` 
+
+This question ask about people's view on a National Pharmacare system. A National Pharmacare system is one of the main goal and achievement of the Liberal Party, therefore it would be beneficial if we take a look at people's view on it.
+ 
+Figure 4.1 shows the general response of people towards this policy. An overwhelming 80% and above responses show their support for the National Pharmacare system with only around 5% of people go against this policy and around 10% of the people feeling not sure about the policy.
+
+With the use of stratified survey, we further divide the response into 3 groups(strata) with regards to their income: those with income less than 20,000 a year are been classified as the low income group, those earn between 20,000 and 80,000 are the middle income group and the rest are the high income group.
+ 
+Figure 4.2 shows whether people support the National Pharmacare system with regards to different income group. One major find here is that the general supportive view that is shared across different income levels. Every income groups show at least 70% of support to the policy. However, there are still differences in opinion among the 3 income groups. The support for the National Pharmacare system peaked at around 88% from the response we collect lower income group and the middle income group share a similar view with an 85% support rate. The high income group, through showing positive feelings about the idea of a National Pharmacare system, have a support rate at around 75% which is almost 10% lower than that of the middle income group. They also show the highest disapproval rate of the National Pharmacare system at around 17% in comparison to the single digit disapproval rate of the National Pharmacare system from the other 2 income group.
+ 
+The Liberal Party took the first steps toward a National Pharmacare system that will help reduce prescription drug costs for Canadians and it has since then becomes a signature policy of the Liberal Party. Through people from different income group show slightly different opinion on the policy, the overwhelming National Pharmacare system support from the population is still loud and clear. Therefore we recommend the Liberal Party to continue the support for the National Pharmacare system.
+
+
+
+
+
+
+
+
+
+
+
+
+
+\newpage
+
+# Appendix
+
+### Appendix(A)
+Link to Survey:https://forms.gle/hGrg3vvN1bi9yt1FA
+
+
+Screenshot of survey: You can see it on the very last page of this report.
+
+\newpage
+
+
+```{r pressure, echo=FALSE, fig.cap="Screenshot of the survey", out.width = '100%'}
+
+knitr::include_graphics("/Users/charlene/304ass2/monthly-poll-report-of-September/survey.png")
+
+
+```
+
+\newpage
+
+
+
+
+### Appendix(B)
+The polltrakcer of CBC NEWS: https://newsinteractives.cbc.ca/elections/poll-tracker/canada/
+
+
+### Appendix(C)
+
+Full code and data supporting this analysis is available at: https://github.com/CharleneJin99/monthly-poll-report-of-September
+\newpage
+
+# References
+1.  Alboukadel Kassambara (2020). ggpubr: 'ggplot2' Based Publication Ready Plots. R package version 0.4.0. https://CRAN.R-project.org/package=ggpubr
+
+2. Grenier, Éric. “CBC News Canada Poll Tracker.” CBC NEWS. Accessed October 7, 2020. https://newsinteractives.cbc.ca/elections/poll-tracker/canada/. 
+
+3. H. Wickham. ggplot2: Elegant Graphics for Data Analysis. Springer-Verlag New York, 2016.
+
+
+4. JJ Allaire and Yihui Xie and Jonathan McPherson and Javier Luraschi and Kevin Ushey and Aron Atkins and Hadley Wickham and Joe Cheng and Winston Chang and Richard Iannone
+  (2020). rmarkdown: Dynamic Documents for R. R package version 2.3. URL https://rmarkdown.rstudio.com.
+
+   Yihui Xie and J.J. Allaire and Garrett Grolemund (2018). R Markdown: The Definitive Guide. Chapman and Hall/CRC. ISBN 9781138359338. URL https://bookdown.org/yihui/rmarkdown.
+
+
+5. Patil, I. (2018). ggstatsplot: 'ggplot2' Based Plots with Statistical Details. CRAN. Retrieved from https://cran.r-project.org/web/packages/ggstatsplot/index.html
+
+
+6. R Core Team (2013). R: A language and environment for statistical
+  computing. R Foundation for Statistical Computing, Vienna, Austria.
+  URL http://www.R-project.org/.
+ 
+
+7.  Schmidt D (2020). “float: 32-Bit Floats.” R package version 0.2-4, <URL: https://cran.r-project.org/package=float>.
+
+  Schmidt D (2017). _Introducing the float package: 32-Bit Floats for R_. R Vignette, <URL: https://cran.r-project.org/package=float>.
+
+8. Wickham et al., (2019). Welcome to the tidyverse. Journal of Open Source Software, 4(43), 1686, https://doi.org/10.21105/joss.01686
+
+
+9. Yihui Xie (2020). knitr: A General-Purpose Package for Dynamic Report Generation in R. R package version 1.30.
+
+   Yihui Xie (2015) Dynamic Documents with R and knitr. 2nd edition. Chapman and Hall/CRC. ISBN 978-1498716963
+
+   Yihui Xie (2014) knitr: A Comprehensive Tool for Reproducible Research in R. In Victoria Stodden, Friedrich Leisch and Roger D. Peng, editors, Implementing Reproducible
+  Computational Research. Chapman and Hall/CRC. ISBN 978-1466561595
+
+ 
+
+
+("knitr",repos="http://cran.us.r-project.org" )
+install.packages("ggpubr",repos="http://cran.us.r-project.org")
+library(knitr)
+knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_knit$get
+install.packages("ggstatsplot", repos="http://cran.us.r-project.org" )
+install.packages("tidyverse", repos="http://cran.us.r-project.org" )
+install.packages("ggplot2",repos="http://cran.us.r-project.org" )
+install.packages("float", repos="http://cran.us.r-project.org" )
+library(tidyverse)
+library(ggplot2)
+library(ggstatsplot)
+library(ggpubr)
+library(float)
+
+```
+
+\begin{center}
+Author: Qiu Jin, Guangyu Du, Runqi Bi, Xingkun Yin
+\end{center}
+
+
+\begin{center}
+Date: 7 October 2020
+\end{center}
+
+
+\begin{center}
+Published by: Petit Poll 
+\end{center}
+\newpage
+
+# Summary
+
+The task of our September poll research this time is to use a questionnaire survey to find out how many people support the Liberal Party, what their income is, and whether they support the three major policies implemented by the Liberal Party: 1. whether they support CEBR, 2. whether they support the government to increase BPA, 3. Whether they support National Pharmacare system that will help reduce prescription drug costs. By grouping people with different income levels and then sampling and observing the responses, we figure out that people with different income levels have a certain supporting tendency toward various policies. In the following report, our goal is to dig into the relationship between individual annual income level and support rate for the Liberal Party, and support rates for the three lately published policies.
+
+We collected the mailboxes of all Canadians living in Ontario from the government, designed a questionnaire and sent the questionnaires to these people's mailboxes. In order to avoid too many people unwilling to take time to participate in the survey, we promise that we will sample 2% of the participants, and each of them will get a lottery chance. In addition, we will declare at the beginning of the questionnaire that we will protect their respondent privacy.
+
+First, we analyzed the people's support rate for the Liberal Party from April to August and found that there were slightly more people opposed to the Liberal Party, although almost the same number of people opposed and supported the Liberal Party. Then we simulated 100,000 results based on the data collected in September and discovered that the supporters of the Liberal Party slightly outnumber the opponents of the Liberal Party. 
+
+Second, we analyzed people's support rate for the government should continue issuing CERB in the following months. Here, we grouped samples into income-level groups because we supposed that the amount of income would affect people's decision-making to some extent. We divide the income levels into annual income less than 20,000, annual income between 20,000 and 80,000, and annual income greater than 80,000. And each group has simulated data for 10,000 times. Here we use Stratified sampling. We can find that the people in each group support this policy the most, but the lower the income group, the more people support it. The group with an income of less than 20,000 has a support rate of 85%, which is the highest. Followed by people with incomes between 20,000 and 80,000, about 70% of them are supported, and those with incomes above 80,000 have the lowest support rate of around 62%. Then we used a histogram Figure 2.1 to more intuitively show the proportion of people with different income levels who support, oppose or do not care about this policy. We see that the two groups of people whose income is less than 80,000 have more opponents than those who don't care. Only those whose income is higher than 80,000, the number of people who don't care is slightly higher than the number of opponents. We further used a histogram Figure 2.2 to summarize the percentage of people at all income levels that support the policy, and the conclusion is that people above 70% support it.
+
+Third, we want to know the support rate of people with different income level for increasing BPA. Because this policy will issue more tax rebates for people with incomes less than 147,000, we divide the population into those with incomes higher than 147,000 this time and the income is less than 147,000. Through the summary table, we can intuitively see that indeed only 27.5% of people with incomes higher than 147,000 support this policy, while about 80% of people with incomes below 147,000 support this policy. Through Pie Chart 3.1, we can see in more detail that it is obvious that low-income people support this policy and hope to get more tax rebates, while high-income people support only about 27.5%, far Far less than the 80% support rate of low-income people. We can also find that the high-income people who do not care about this policy also account for a relatively large proportion, as high as about 33%, even more than those who support it. Finally, through Figure 3.2, we can see that although high-income groups tend to oppose this policy, due to the widespread support of low-income groups for this policy, on the whole, supporters still account for the majority of all people.
+
+Fourth, We want to know how people support the National Pharmacare system that will help reduce prescription drug costs with the withdrawal of the Canadian Liberal Party. Through Figure 4.1, it was surprisingly found that more than 80% of people support this policy, which is a very high support rate. Here we still group the data according to income below 20,000, between 20,000 and 80,000, and above 80,000, and then simulate 10,000 times each. It can be seen that the support rate of the three groups is very high, although the higher the income group, the lower the support rate of this policy. People with incomes below 20,000 and those with incomes between 20,000 and 80,000 have almost the same approval ratings, while those with incomes above 80,000 have a significant drop in approval ratings. Figure 3.2 shows in more detail the support, opposition, and uncertainty ratios of each income group. It was found that with the increase in income, the approval rate shows a slight downward trend, while the uncertainty and disapproval rates both show a slight upward trend. In the other two groups, the uncertain samples were larger than the opponent samples.
+
+We think this analysis is essential because we can predict people's support rate towards different policies with respect to income levels of the individuals, and then speculate the overall support rate for the Liberal Party. Moreover, people's income is relatively easy to obtain, and the prediction of the support rate towards the three policies is strongly related to people's income.
+
+The weakness of this study is that our questionnaire only asks whether it supports the Liberal Party and whether it supports some policies implemented by the Liberal Party. This may cause those who initially opposed the Liberal Party to be unwilling to fill out this questionnaire, which causes insufficient samples of individuals with political leanings other than the Liberal Party. Another weakness is that some people may have a higher opportunity cost, and they are unwilling to spend time participating in questionnaires. The $200 gift card in the form of a lottery could be not attractive enough for them. In this way, we could risk insufficient data from people with higher income levels. Besides, we used the method of stratified sampling for most of the analysis, that means we divided people into different income-level groups and pick samples from each group randomly. The technique is helpful; it can provide a greater precision with a lower cost. The problem is that, without knowing the actual percentage of each group of income-level in the real world, the simulated data might not be accurate, and the prediction of the population will be biased. One of another lurking variable is whether the respondent is natives or immigrants, that may influence their attitude towards the liberal party. Therefore, in our future work, we will contribute to this study by combining these variables and produce more effective results.
+
+^[* Full code and data supporting this analysis is available at https://github.com/CharleneJin99/monthly-poll-report-of-September ]
+
+^[* A link and a screenshot of the survey can be found at Appendix(A)]
+
+\newpage
+
+# Introduction
+<font size="4">Due to the influence of COVID-19, the whole Canada society is experiencing an exceptional and challenging period. The liberal party has conducted various new politics to improve people's livelihood and help everyone to overcome difficulties. In this monthly report, the Petit Poll Company will summarize the data collected in September and analyze the people's response towards the liberal party and the new politics.
+
+In specific, we will discuss people's attitude towards: 1) the liberal party of Canada; 2) if they support the idea that the government should continue issuing CERB in the following months; 3) whether they support the policy about raising the Basic Personal Amount for people earning under \$147,000 a year; 4)do they support a National Pharmacare system that will help reduce prescription drug costs.
+
+The purpose of this report is to draw a clear picture on Ontario citizens' responses with different income levels towards the three policies in order to make great supports and help on further develop of the party in following steps. Given the situation of the present pandemic, it is crucial that the liberal party knows the real needs of society and would be able to help our people.  
+<font>
+
+
+
+# Methodology
+
+The geographic focus of this research will be particularly Ontario province. The population is all the citizens with suffrage in this province. We have designed a simple survey asking people's attitude upon the liberal party and new politics and collected the responses by sending emails to the list of Ontario citizens' email address.The survey was taken anonymously, all the participants would be notified by a consent form at the start of survey. Since too much non-response would cause a bias on the sample data, and the results could be underestimated, in order to encourage people's participation, a lottery chance would be given to each participant. We sent the survey to over 100 thousands email addresses and received around ten thousands responses. The research sample is based on these 10 thousand responses, and the frame of data collection is the email list of Ontario citizens that is provided by our company. The fund for this survey research involves cost of running survey platform, cost of lottery and cost of managing databases, which is approximately 30,000 CAD in total.
+
+In this research, we use the sampling methods of simple random sampling and stratified sampling. For the stratified sampling method, we partition the population into subgroups by different level of personal annual income. We replaced all negative income with zero, because a negative income is actually unreasonable. Citizens with an annual income lower than 20,000CAD is classified as a low-income group. Citizens with annual income between 20,000CAD and 80,000CAD is classified as a medium-income group. Citizens with annual income higher than 80,000CAD is classified as a high-income group. Since the support rate of politics we are studying is strongly relevant to personal income, it is reasonable that the response from each income group is highly representative. After grouping the sample data, we randomly select the same amount of responses with replacement from each group, combine them into a sample group, simulate them by 100,000 times and compare the results with past months' result. Furthermore, we will conduct our predictions of the support rate of the entire population.
+
+
+\newpage
+
+# Data Discussion
+
+
+```{r population simulation, echo=FALSE}
+library("tidyverse")
+set.seed(100)
+
+#data simulation for population. As for each specific question, the rate for each response is different based on past information, note that "IDC" means "I do not care".
+partyvote <- sample( c("YES","NO", "IDC"),100000, prob = c(0.39,0.40, 0.21), replace = TRUE)# simulation for 1st Question
+popvote <- sample( c("YES","NO", "IDC"),100000, prob = c(0.60,0.28, 0.1), replace = TRUE)# simulation for 2nd Question
+bpa_vote <- sample( c("YES","NO", "IDC"),100000, prob = c(0.40, 0.30, 0.30), replace = TRUE)# simulation for 3rd Question  
+income <- rnorm(100000, mean = 50000, sd = 30000)
+population <- tibble(partyvote,popvote, bpa_vote, income)
+```
+
+
+\textcolor{blue}{First question:  Do you support the liberal party?}
+
+```{r,echo=FALSE}
+# visualize raw data
+legend_title <- "type of response"
+figure1_1 <- ggplot(data=population, aes(as.factor(partyvote)))+
+  geom_bar(aes(fill=as.factor(partyvote), y = (..count..)/1000), position="dodge") +
+  labs(x= "response type", y = "percentage for each response(%)", title ="Past months' overall support rate (figure 1.1)")+ #population response based on past information
+  scale_fill_manual(legend_title,values=c("#8FBC94","#4FB0C6","#CC9966"))
+figure1_1
+```
+\newpage
+```{r,echo=FALSE}
+set.seed(1111)
+simulated_vote<- sample( c("YES","NO", "IDC"),100000, prob = c(0.42,0.41, 0.17), replace = TRUE) #data simulation based on the new information we collected
+samplevote <- tibble(simulated_vote)
+# simple random sampling
+samplevote_SRS <- samplevote %>% sample_n(10000, replace = TRUE)
+# Visualize sample data
+legend_title <- "type of response"
+figure1_2<- ggplot(data=samplevote_SRS, aes(simulated_vote))+
+  geom_bar(aes(fill=as.factor(simulated_vote), y = (..count..)/100), position="dodge") +
+  labs(x= "response type", y = "percentage for each response", title = "Simulation of current overall support rate (figure 1.2)")+ # prediction of population response based on new collected data
+  scale_fill_manual(legend_title,values=c("#8FBC94","#4FB0C6","#CC9966"))
+figure1_2
+```
+
+
+```{r,include=FALSE}
+#Calculate the 95% of Confidence interval
+samq1<- samplevote_SRS %>% summarise(total_nuber= n(),average_support_rate= mean(simulated_vote == "YES"))
+q1pop <- samplevote %>%  summarise(total_nuber = n())
+# estimate the population mean support rate by sample mean support rate
+estq1 <- sum(q1pop$total_nuber/sum(q1pop$total_nuber) * samq1$average_support_rate)
+# calculate the variance of the support rate
+var_estq1 <- sum((q1pop$total_nuber/sum(q1pop$total_nuber))^2 *(1- samq1$total_nuber/q1pop$total_nuber) * samq1$average_support_rate *(1- samq1$average_support_rate)/(samq1$total_nuber - 1))
+# Calculate the 95% confidence interval
+lowerq1=estq1 - qnorm(0.975) *sqrt(var_estq1);upperq1=estq1 + qnorm(0.975) *sqrt(var_estq1)
+
+```
+
+
+
+<font size="4">For this question, we will provide the information for:
+a) The support rate on Liberal Party from Ontario citizens in the past few months(based on the data we collected from April to August).
+b) Based on the simulation of the data we collected in September, a prediction of population support rate on Liberal Party in the real world.
+
+
+We used simple random sampling in this question. As figure 1.1 shows, based on the data we collected from April to August, around 39% of Ontario citizens supported the Liberal Party. Yet around 40% of people was not supporting the party and the rest of 21% citizens did not care. Notice that the majority of people who voted "NO" could be supporters of the Conservative Party and people who voted "I don't care." could be supporting other parties or having no political leanings.
+
+As for figure 1.2, we simulated the data by 100000 times based on our collected data in September. We took the method of simple random sampling to simulate and predict the results. It is noticeable that the support rate has increased by 2%. As the against rate almost stays the same, the amount of people voting "I don't care." decreased by 3%. This implies that we could predict Liberal Party is gaining supports among the society. Moreover, we could predict the real support rate on Liberal Party among the population is around 41% to 43% with 95% of confidence (calculated with mean which is an unbiased estimate). This could be relevant to the lately released policies and we will further discuss this topic in the following paragraph.
+
+^[* You could find a report that supports our analysis in Appendix(B)]
+</font>
+
+
+
+\newpage
+
+
+
+
+\textcolor{blue}{Second question: Do you support the idea that the government should continue issuing CERB in the following months?}
+
+
+```{r q2, echo=FALSE}
+
+
+#data simulation based on the data we collected in September
+set.seed(123456)
+income <- rnorm(100000, mean = 50000, sd =30000)
+income_level <- c("A:less than 20000", "B:between 20000 and 80000", "C:greater than 80000")
+
+
+vote <- NULL
+
+
+#data cleaning. Replace all negative income by zero, as it does not make sense to have a negative income.
+for (i in 1 : 100000){
+  if(income[i]<0){
+    income[i] = 0
+  } 
+# income and vote have correlation. Stratified sampling by different income-levels..
+  if (income[i] < 20000){
+   
+    vote[i] <- sample( c("YES","NO", "IDC"),1, prob = c(0.85,0.1, 0.05), replace = TRUE)
+    income_level[i] <- c("A:less than 20000")
+
+  }
+ 
+  if (income[i]>=20000 & income[i] < 80000){
+    vote[i] <- sample( c("YES","NO", "IDC"),1, prob = c(0.70,0.18, 0.12), replace = TRUE)
+    income_level[i] <- c("B:between 20000 and 80000")
+  }
+  if(income[i] >=80000){
+     vote[i] <- sample( c("YES","NO", "IDC"),1, prob = c(0.62,0.18, 0.2), replace = TRUE)
+    income_level[i] <- c("C:greater than 80000")
+    
+  }
+}
+population <- tibble(partyvote,popvote, bpa_vote, income)
+
+
+simulated_population <- tibble(vote,income_level,income)
+set.seed(1)
+# pick 10000 samples from each income-level group randomly.
+sample_STRS <- simulated_population %>% group_by(income_level) %>% sample_n(size = 10000,replace = TRUE)
+
+```
+
+
+<font size="4"> A visualized summary of the responses based on the sample data </font>
+
+```{r,echo=FALSE, message=FALSE}
+#summary of sample data
+samq2<- sample_STRS %>% group_by(income_level) %>% summarise(total_nuber= n(),average_support_rate= mean(vote == "YES"), average_income= mean(income))
+samq2
+# Visualize sample data
+legend_title <- "type of response"
+figure2_1<- ggplot(data=sample_STRS, aes(income_level))+
+  geom_bar(aes(fill=as.factor(vote), y = (..count..)/100), position="dodge") +
+  labs(x= "income level", y = "percentage for each response", title = "figure 2.1 different inome-level groups' vote with regards to CERB")+
+  scale_fill_manual(legend_title,values=c("purple","light blue","blue"))
+figure2_1
+  
+``` 
+
+
+
+\newpage
+<font size="4">Visualized overall summary of simulated data</font>
+```{r, echo=FALSE}
+
+legend_title <- "type of response"
+figure2_2 <- ggplot(data=sample_STRS, aes(as.factor(vote)))+
+  geom_bar(aes(fill=as.factor(vote), y = (..count..)/300), position="dodge") +
+  labs(x= "response type", y = "percentage for each response(%)", title ="figure 2.2  prediction of popularity vote with regards to CERB")+
+
+  scale_fill_manual(legend_title,values=c("purple","light blue","blue"))
+figure2_2
+
+
+```
+
+
+
+```{r, message=FALSE, include=FALSE}
+popq2 <- simulated_population %>% group_by(income_level) %>% summarise(total_nuber = n())
+# estimate the population mean support rate by sample mean support rate
+estq2 <- sum(popq2$total_nuber/sum(popq2$total_nuber) * samq2$average_support_rate)
+# calculate the variance of the support rate
+var_estq2 <- sum((popq2$total_nuber/sum(popq2$total_nuber))^2 *(1- samq2$total_nuber/popq2$total_nuber) * samq2$average_support_rate *(1- samq2$average_support_rate)/(samq2$total_nuber - 1))
+# Calculate the 95% confidence interval
+lowerq2=estq2 - qnorm(0.975) *sqrt(var_estq2);upperq2=estq2 + qnorm(0.975) *sqrt(var_estq2)
+
+```
+
+
+<font size="4">For this question, we will provide the information for:
+
+a) Based on the new data we collected in September, a possible variable that influences people's support rate about CERB. 
+b) Based on the simulation of the data we collected, a prediction of population response in the real world.
+
+For figure 2.1, we simulated the data by 100000 times based on our collected data. During the process of data cleaning, we used the stratified random sampling and put people into three different income-level groups according to the average income and its standard deviation(how spread out the data is). Since the average personal income is 50000, with a standard deviation of 30000, we divided people into three groups: income is lower than the normal level(less than 20,000); income is around the normal level(between 20,000 and 80,000), income is higher than the usual level(greater than 80,000). 
+
+It is not hard to notice that people with more income tend to be less supportive about having the government to carry on the benefit policies;. At the same time, the support rate among lower income-level group goes beyond 80%. Besides, more than 60% of people who have an income around the normal level would support this policy.
+
+The last figure(figure 2.2) is plotted based on the simulated data. With the information we get from the simulated data, we are 95% confident that the population's true average support rate of CERB should be at 71% to 72% (calculated with mean which is an unbiased estimate) . The high support rate among the lower-income group has significantly increased the average support rate of the policy.
+
+The situation of COVID-19 has been worsened in Ontario recently.  With the uncertainty of the future situation, society is getting more panic. Some people may heavily rely on the benefits issued by the government, such as CERB. We hope the analysis above can give you some clues about how different people with different income feel about this policy.</font>
+
+\newpage
+
+\textcolor{blue}{Third question: Do you support the Liberal Party of Canada's policy about raising the Basic Personal Amount (BPA) by almost \$2,000 for people earning under \$147,000 a year?}
+
+
+```{r q3, echo=FALSE}
+income_level_bpa <- c("A:less than 147000", "B:greater than or equal to 147000")
+#data cleaning. Replace all negative income by zero, as it does not make sense to have a negative income.
+set.seed(100)
+bpa_vote <- NULL
+
+for (i in 1 : 100000){
+# income and vote for bpa have correlation. Stratified sampling by different income-levels..
+  if (income[i] < 147000){
+    bpa_vote[i] <- sample( c("YES","NO", "IDC"),1, prob = c(0.80, 0.10, 0.10), replace = TRUE)
+    income_level_bpa[i] <- c("A:less than 147,000")
+
+  }
+  if (income[i] >= 147000){
+    bpa_vote[i] <- sample( c("YES","NO", "IDC"),1, prob = c(0.30, 0.40, 0.30), replace = TRUE)
+    income_level_bpa[i] <- c("B:greater than or equal to 147000")
+  }
+}
+
+simulated_population_bpa <- tibble(bpa_vote, income_level_bpa, income)
+set.seed(1)
+# pick 10000 samples from each income-level group randomly.
+sample_STRS_BPA <- simulated_population_bpa %>% group_by(income_level_bpa) %>% sample_n(10000, replace = TRUE)
+```
+
+<font size="4"> A visualized summary of the responses based on the sample data </font>
+
+```{r,echo=FALSE, message=FALSE}
+# utils::install.packages(pkgs = "ggstatsplot")
+# install.packages("broom")
+library(ggstatsplot)
+sam_bpa<- sample_STRS_BPA %>% group_by(income_level_bpa) %>% summarise(total_number= n(),average_support_rate= mean(bpa_vote == "YES"), average_income= mean(income))
+sam_bpa
+figure3_1 <- ggpiestats(data = sample_STRS_BPA,
+                 x = bpa_vote,
+                 y = income_level_bpa,
+                 title = "figure3.1: different response about raising BPA in different income group",
+                 results.subtitle = F,
+                 slice.label = 'percentage', 
+                 perc.k = 2,
+                 direction = 1,
+                 palette = 'Pastel2')
+figure3_1
+``` 
+
+
+<font size="4">Visualized overall summary of simulated data</font>
+```{r, echo=FALSE}
+legend_title <- "type of response"
+figure3_2 <- ggplot(data=sample_STRS_BPA, aes(as.factor(bpa_vote)))+
+  geom_bar(aes(fill=as.factor(bpa_vote), y = (..count..)/200), position="dodge") +
+  labs(x= "response type", y = "percentage for each response(%)", title ="figure 3.2 prediction of population's response about raising BPA") + 
+  scale_fill_manual(legend_title,values=c("#8FBC94","#4FB0C6","#CC9966"))
+figure3_2
+
+```
+
+```{r, message=FALSE, include=FALSE}
+bpa_overall <- simulated_population_bpa %>% group_by(income_level_bpa) %>% summarise(total_nuber = n())
+# estimate the population mean support rate by sample mean support rate
+estq3 <- sum(bpa_overall$total_nuber/sum(bpa_overall$total_nuber) * sam_bpa$average_support_rate)
+# calculate the variance of the support rate
+var_estq3 <- sum((bpa_overall$total_nuber/sum(bpa_overall$total_nuber))^2 *(1- sam_bpa$total_number/bpa_overall$total_nuber) * sam_bpa$average_support_rate *(1- sam_bpa$average_support_rate)/(sam_bpa$total_number - 1))
+# Calculate the 95% confidence interval
+lowerq2=estq3 - qnorm(0.975) *sqrt(var_estq3);upperq2=estq3 + qnorm(0.975) *sqrt(var_estq3)
+
+```
+
+\newpage
+We divide the data into two categories, those with income below 147,000 and those with income above 147,000. Because this policy has higher tax rebates for people whose income is less than 147,000. From the summary table above, we can find that for people with an income of more than $147,000, the support rate for this policy is 0.2752, which is much lower than those with an income of less than $147,000. The support rate of low-income people for this policy is as high as 0.8009. Because there are 10,000 people in our data set whose income is higher than $147,000, and 10,000 people are below $147,000. Therefore, through their different support rates, we have reason to believe that the amount of income is related to whether or not to support this policy.
+
+
+Figure 3.1 shows the percentage of people with incomes below $147,000 and above $147,000 who support, disagree, or don’t care about increasing BPA. We can find that up to about 80% of the low-income people support this policy, and only about 10% oppose it, which is about the same as those who don’t care. In contrast to high-income groups, more people oppose this policy than those who support it. About 39% of people oppose this policy, while those who support it account for only about 27.5%, even lower than those who don’t care which is about 33%. We can conclude from this that people with an income of less than 147,000 are particularly inclined to support this policy, while those with an income of more than 147,000 are slightly opposed to this policy, but there are also many people who support or do not care.
+
+
+Figure 3.2 shows the overall people’s support for this policy. In our forecast, about 47.5% of people will support this policy, about 25% will be opposed to this policy, and the remaining 27.5% will not care about this policy. Comparing with the information collected in the past (in Figure 3.1), we can see that the supporters may rise slightly, from 40% to 47.5%, while the opponents will slightly decrease, from 30% To 15%. This may be due to the slight decrease in people’s income this year. With the information we get from the data, we are 95% confident that the population’s true average support rate of raising BPA should be around 79.32% (calculated with mean which is an unbiased estimate). Such a high support rate is mainly due to the general support of low-income groups for this policy.
+
+
+
+
+\newpage
+\textcolor{blue}{Forth question: Do you support a National Pharmacare system that will help reduce prescription drug costs? }
+
+```{r, echo=FALSE}
+
+
+#data simulation based on the data we collected in September
+set.seed(100)
+income <- rnorm(100000, mean = 50000, sd =30000)
+income_level <- c("A:less than 20000", "B:between 20000 and 80000", "C:greater than 80000")
+
+
+support_pharmacare <- NULL
+
+
+#data cleaning. Replace all negative income by zero, as it does not make sense to have a negative income.
+for (i in 1 : 100000){
+  if(income[i]<0){
+    income[i] = 0
+  } 
+# income and support_pharmacare have correlation. Stratified sampling by different income-levels..
+  if (income[i] < 20000){
+   
+    support_pharmacare[i] <- sample( c("YES","NO", "Unsure"),1, prob = c(0.88,0.04, 0.08), replace = TRUE)
+    income_level[i] <- c("A:less than 20000")
+
+  }
+ 
+  if (income[i]>=20000 & income[i] < 80000){
+    support_pharmacare[i] <- sample( c("YES","NO", "Unsure"),1, prob = c(0.85,0.05, 0.10), replace = TRUE)
+    income_level[i] <- c("B:between 20000 and 80000")
+  }
+  if(income[i] >=80000){
+    support_pharmacare[i] <- sample( c("YES","NO", "Unsure"),1, prob = c(0.74,0.14, 0.12), replace = TRUE)
+    income_level[i] <- c("C:greater than 80000")
+    
+  }
+}
+population <- tibble(popvote, bpa_vote, income, support_pharmacare)
+
+
+simulated_populationq4 <- tibble(support_pharmacare,income_level,income)
+set.seed(100)
+# pick 10000 samples from each income-level group randomly.
+sample_STRSq4 <- simulated_populationq4 %>% group_by(income_level) %>% sample_n(10000, replace = TRUE)
+
+```
+
+```{r, echo=FALSE}
+
+
+legend_title <- "type of response"
+figure4_1 <- ggplot(data=sample_STRSq4, aes(as.factor(support_pharmacare)))+
+  geom_bar(aes(fill=as.factor(support_pharmacare), y = (..count..)/300), position="dodge") +
+  labs(x= "response type", y = "percentage for each response(%)", title ="figure 4.1  prediction of popularity vote with regards to 
+                    a National Pharmacare system")+
+
+  scale_fill_manual(legend_title,values=c("purple","light blue","blue"))
+figure4_1
+
+
+
+```
+
+
+```{r,echo=FALSE, message=FALSE}
+#summary of sample data
+samq4<- sample_STRSq4 %>% group_by(income_level) %>% summarise(total_nuber= n(),average_support_rate= mean(support_pharmacare == "YES"), average_income= mean(income))
+samq4
+# Visualize sample data
+legend_title <- "type of response"
+figure4_2<- ggplot(data=sample_STRSq4, aes(income_level))+
+  geom_bar(aes(fill=as.factor(support_pharmacare), y = (..count..)/10000), position="dodge") +
+  labs(x= "income level", y = "percentage for each response", title = "figure 4.2   different income-level groups' response with 
+  regards to a National Paarmacare system")+
+  scale_fill_manual(legend_title,values=c("purple","light blue","blue"))
+figure4_2
+  
+``` 
+
+This question ask about people's view on a National Pharmacare system. A National Pharmacare system is one of the main goal and achievement of the Liberal Party, therefore it would be beneficial if we take a look at people's view on it.
+ 
+Figure 4.1 shows the general response of people towards this policy. An overwhelming 80% and above responses show their support for the National Pharmacare system with only around 5% of people go against this policy and around 10% of the people feeling not sure about the policy.
+
+With the use of stratified survey, we further divide the response into 3 groups(strata) with regards to their income: those with income less than 20,000 a year are been classified as the low income group, those earn between 20,000 and 80,000 are the middle income group and the rest are the high income group.
+ 
+Figure 4.2 shows whether people support the National Pharmacare system with regards to different income group. One major find here is that the general supportive view that is share across different income levels. Every income groups shows at least 70% of support to the policy. However, there are still difference in opinion among the 3 income groups. The support for the National Pharmacare system peaked at around 88% from the response we collect lower income group and the middle income group share a similar view with a 85% support rate. The high income group, through showing positive feelings about the idea of a National Pharmacare system, have a support rate at around 75% which is almost 10% lower than that of the middle income group. They also show the highest disapproval rate of the National Pharmacare system at around 17% in comparison to the single digit disapproval rate of the National Pharmacare system from the other 2 income group.
+ 
+The Liberal Party took the first steps toward a National Pharmacare system that will help reduce prescription drug costs for Canadians and it has since then becomes a signature policy of the Liberal Party. Through people from different income group show slightly different opinion on the policy, the overwhelming National Pharmacare system support from the population is still loud and clear. Therefore we recommend the Liberal Party to continue the support for the National Pharmacare system.
+
+
+
+
+
+
+
+
+
+
+
+
+
+\newpage
+
+# Appendix
+
+### Appendix(A)
+Link to Survey:https://forms.gle/hGrg3vvN1bi9yt1FA
+
+
+Screenshot of survey: You can see it on the very last page of this report.
+
+\newpage
+
+
+```{r pressure, echo=FALSE, fig.cap="Screenshot of the survey", out.width = '100%'}
+
+knitr::include_graphics("/Users/charlene/304ass2/monthly-poll-report-of-September/survey.png")
+
+
+```
+
+\newpage
+
+
+
+
+### Appendix(B)
+The polltrakcer of CBC NEWS: https://newsinteractives.cbc.ca/elections/poll-tracker/canada/
+
+
+### Appendix(C)
+
+Full code and data supporting this analysis is available at: https://github.com/CharleneJin99/monthly-poll-report-of-September
+\newpage
+
+# References
+1.  Alboukadel Kassambara (2020). ggpubr: 'ggplot2' Based Publication Ready Plots. R package version 0.4.0. https://CRAN.R-project.org/package=ggpubr
+
+2. Grenier, Éric. “CBC News Canada Poll Tracker.” CBC NEWS. Accessed October 7, 2020. https://newsinteractives.cbc.ca/elections/poll-tracker/canada/. 
+
+3. H. Wickham. ggplot2: Elegant Graphics for Data Analysis. Springer-Verlag New York, 2016.
+
+
+4. JJ Allaire and Yihui Xie and Jonathan McPherson and Javier Luraschi and Kevin Ushey and Aron Atkins and Hadley Wickham and Joe Cheng and Winston Chang and Richard Iannone
+  (2020). rmarkdown: Dynamic Documents for R. R package version 2.3. URL https://rmarkdown.rstudio.com.
+
+   Yihui Xie and J.J. Allaire and Garrett Grolemund (2018). R Markdown: The Definitive Guide. Chapman and Hall/CRC. ISBN 9781138359338. URL https://bookdown.org/yihui/rmarkdown.
+
+
+5. Patil, I. (2018). ggstatsplot: 'ggplot2' Based Plots with Statistical Details. CRAN. Retrieved from https://cran.r-project.org/web/packages/ggstatsplot/index.html
+
+
+6. R Core Team (2013). R: A language and environment for statistical
+  computing. R Foundation for Statistical Computing, Vienna, Austria.
+  URL http://www.R-project.org/.
+ 
+
+7.  Schmidt D (2020). “float: 32-Bit Floats.” R package version 0.2-4, <URL: https://cran.r-project.org/package=float>.
+
+  Schmidt D (2017). _Introducing the float package: 32-Bit Floats for R_. R Vignette, <URL: https://cran.r-project.org/package=float>.
+
+8. Wickham et al., (2019). Welcome to the tidyverse. Journal of Open Source Software, 4(43), 1686, https://doi.org/10.21105/joss.01686
+
+
+9. Yihui Xie (2020). knitr: A General-Purpose Package for Dynamic Report Generation in R. R package version 1.30.
+
+   Yihui Xie (2015) Dynamic Documents with R and knitr. 2nd edition. Chapman and Hall/CRC. ISBN 978-1498716963
+
+   Yihui Xie (2014) knitr: A Comprehensive Tool for Reproducible Research in R. In Victoria Stodden, Friedrich Leisch and Roger D. Peng, editors, Implementing Reproducible
+  Computational Research. Chapman and Hall/CRC. ISBN 978-1466561595
+
+ 
+
